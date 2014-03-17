@@ -1,0 +1,383 @@
+@charset "UTF-8";
+body{
+    margin:0;
+    padding:0;
+    background-color: #fefefe;
+    background-image: url("../img/nadaken_bg.png");    
+    color:#666666;
+    font-size:12pt;
+}
+.page{
+    width:100%;
+}
+.header_back{
+    background-image: url("../img/maru_bg_stripe_top.png");
+    height:60px;
+}
+.fix_center, .widget-area{
+    width:900px;
+    margin:auto;
+}
+.search-box{
+    float:left;
+    width:300px;
+    margin:auto;
+}
+.search-box .submit_button{
+    display:none;
+}
+.search-box #ContentQ{
+    margin-top:15px;
+    width:250px;
+    height:28px;
+    font-size:11pt;
+    padding-left:15px;
+    border-radius:30px;
+    border-width: 0;
+    background-image: url("../img/maru_search.png");
+    background-position: 242px center;
+    background-color: white;
+    background-repeat: no-repeat;
+    box-shadow:1px 1px 1px #9d9d8e;
+}
+.connection p{
+    margin:0;
+}
+.sns{
+    float:right;
+    height:25px;
+    width:520px;
+    text-align:right;
+}
+.page{
+    position: absolute;
+}
+.main_content{
+    margin-top:408px;
+}
+
+.navigation{
+    background-image: url("../img/nadaken_bg_wh.png");    
+    position:absolute;
+    width:100%;
+    padding-top:60px;
+    height:352px;
+    top:0px;
+}
+.navigation ul{
+    list-style: none;
+}
+.navigationt li{
+    display: block;
+
+}
+.navigation li a{
+    border:1px solid #d8d8d8;
+    border-left-width: 0;
+    border-right-width: 0;
+    margin-bottom: -1px;    
+    display:block;
+    height: 57px;
+    line-height: 57px;
+    padding-left:52px;
+    background-image: url("../img/maru_icon.gif");
+    background-position: 23px center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    color:#666666;
+    width:238px;
+    transition-duration: 0.4s;    
+    
+}
+.navigation li a:hover, .totop:hover{
+    background-color:rgba(158,158,143,0.4);
+    color:#000;
+    box-shadow: rgba(158,158,143,0.4) 0 0 10px;
+    transition-duration: 0.4s;
+    
+}
+.menu_left,.logo,.menu_right{
+    float:left;
+}
+
+.logo{
+    margin-top:91px;
+    width:320px;
+    text-align:center;
+}
+.logo img{
+    border-radius: 88px;
+    transition-duration: 0.2s;    
+}
+.logo img:hover{
+    margin:-4px;
+    box-shadow:0 4px 4px rgba(0,0,0,0.4);
+    transition-duration: 0.2s;    
+    
+}
+
+.menu_left ul, .menu_right ul{
+    margin:0;
+    margin-top: 60px;
+    padding:0;
+}
+.connection{
+    padding:23px;
+    height:128px;
+    border-bottom:1px solid #d8d8d8;
+    color:#9e9e8f;
+}
+.company_name{
+    font-size:11pt;
+}
+.tel{
+    font-size:15pt;
+    font-weight: bold;
+}
+.tel .number{
+    color:#666666;
+}
+.time{
+    font-size: 9pt;
+    padding-left:5pt;
+}
+.addrees{
+    padding-left:5pt;
+    font-size:11pt;
+    padding-top:8px;
+}
+.map_link{
+    display:inline-block;
+    width:34px;
+    height:14px;
+    background-color:#9D6764;
+    font-size:10px;
+    text-align:center;
+}
+.map_link a{
+    text-decoration: none;
+    color:#eee;
+}
+.eyeCatch{
+    height: 165px;
+    width:165px;
+    overflow:hidden;     
+    border-radius: 50%;
+    transition-duration: 0.3s;
+}
+.eyeCatch:hover{
+    transition-duration: 0.1s;
+    margin-top:-4px;
+    box-shadow:0 4px 4px rgba(0,0,0,0.3);    
+}
+.eyeCatch img{
+    height:165px;
+}
+
+.container{
+    padding-top:30px;
+}
+.article{
+    margin:30px;
+    float:left;
+    height:165px;
+}
+.article .new{
+    background-color:#9d6764;
+    width:45px;
+    height:45px;
+    color:#fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    font-size:9pt;
+    font-weight: bold;
+    position:relative;
+    top:-165px;
+    left:125px;
+}
+
+.totop{
+    display:block;
+    clear:left;
+    width:440px;
+    background-color:white;
+    text-align: center;
+    height:57px;
+    margin:30px auto 60px auto;
+    line-height:57px;
+    border:1px solid #d8d8d8;    
+}
+.totop{
+    color:#666666;
+    text-decoration: none;
+    transition-duration: 0.4s;    
+}
+.totop img{
+    padding-right:0.7em;
+}
+.footer hr{
+    height:60px;
+    background-image: url("../img/nadaken_bg_wh.png");    
+    border:none;
+}
+#border_top, #border_bottom,#border_left, #border_right{
+    transition-duration: 1s;
+    position: fixed;
+}
+#border_top, #border_bottom{
+    width:100%;
+    z-index: 9996;
+}
+#border_top,#border_bottom{
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: ease-out;
+    -o-animation-duration: 1s;
+    -o-animation-timing-function: ease-out;
+    -ms-animation-duration: 1s;
+    -ms-animation-timing-function: ease-out;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;    
+}
+#border_top{
+    -webkit-animation-name: border_top_anime;
+    -moz-animation-name: border_top_anime;
+    -o-animation-name: border_top_anime;
+    -ms-animation-name: border_top_anime;
+    animation-name: border_top_anime;
+    top:0px
+}
+#border_bottom{
+    -webkit-animation-name: border_bottom_anime;
+    -moz-animation-name: border_bottom_anime;
+    -o-animation-name: border_bottom_anime;
+    -ms-animation-name: border_bottom_anime;
+    animation-name: border_bottom_anime;
+}
+
+@-webkit-keyframes border_top_anime{
+    0%{top:-60px}
+    30%{top:-60px}
+    100%{top:0px}
+}
+@-moz-keyframes border_top_anime{
+    0%{top:-60px}
+    30%{top:-60px}    
+    100%{top:0px}
+}
+@-o-keyframes border_top_anime{
+    0%{top:-60px}
+    30%{top:-60px}    
+    100%{top:0px}
+}
+@-ie-keyframes border_top_anime{
+    0%{top:-60px}
+    30%{top:-60px}    
+    100%{top:0px}
+}
+@keyframes border_top_anime{
+    0%{top:-60px}
+    30%{top:-60px}    
+    100%{top:0px}
+}
+@-webkit-keyframes border_bottom_anime{
+    0%{bottom:-92px}
+    30%{bottom:-92px}    
+    100%{bottom:0px}
+}
+@-moz-keyframes border_bottom_anime{
+    0%{bottom:-92px}
+    30%{bottom:-92px}    
+    100%{bottom:0px}
+}
+@-o-keyframes border_bottom_anime{
+    0%{bottom:-92px}
+    30%{bottom:-92px}    
+    100%{bottom:0px}
+}
+@-ie-keyframes border_bottom_anime{
+    0%{bottom:-92px}
+    30%{bottom:-60px}    
+    100%{bottom:0px}
+}
+@keyframes border_bottom_anime{
+    0%{bottom:-92px}
+    30%{bottom:-92px}    
+    100%{bottom:0px}
+}
+
+#border_bottom{
+    bottom:0px;
+}
+#border_left{
+    left:0px;
+}
+#border_left, #border_right{
+    width:60px;
+    z-index: 9995;
+    height:100%;
+    top:0;
+    background-image: url("../img/maru_bg_stripe.png");
+    
+}
+#border_left{
+    left:0;
+}
+#border_right{
+    right:0;
+}
+.menu_left .last{
+    display:none;
+}
+.widget-area h2,.fb-like-box{
+    margin-top: 60px;
+    font-size: 11pt;
+    text-align: center;
+}
+.footer_background,.footer_navi{
+    background-image: url("../img/maru_bg_stripe_bottom.png");    
+    
+}
+
+.footer_navi{
+    margin-top:60px;
+    padding-top:40px;
+    padding-bottom: 92px;
+}
+.footer_navi ul {
+    margin:0;
+    text-align: center;
+}
+.footer_navi li{
+  display:inline-block;
+  margin:0 1em;
+  
+}
+.footer_navi a{
+    text-decoration: none;
+}
+.copyright,.footer_navi a{
+    color:rgba(255,255,255,0.8);
+    font-size:14px;
+    
+}
+.copyright{
+    margin:0;
+    height:92px;
+    line-height: 92px;
+    text-align: center;
+
+}
+@media screen and (max-width: 1020px) {
+    #border_left, #border_right{
+        transition-duration: 1s;
+    }
+    #border_left{
+        left:-60px;
+    }
+    #border_right{
+        right:-60px;
+    }    
+}
