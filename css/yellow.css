@@ -3,18 +3,15 @@ body{
     margin:0;
     padding:0;
     background-color: #fefefe;
-    background-image: url("../img/nadaken_bg.png");    
-    color:#666666;
+    color:#000;
     font-size:12pt;
 }
-a{
-    text-decoration: none;
-}
+
 .page{
     width:100%;
 }
 .header_back{
-    background-image: url("../img/maru_bg_stripe_top.png");
+    background-color:#ff0;
     height:60px;
 }
 .fix_center, .widget-area{
@@ -36,12 +33,11 @@ a{
     font-size:11pt;
     padding-left:15px;
     border-radius:30px;
-    border-width: 0;
+    border: 1px solid #000;
     background-image: url("../img/maru_search.png");
     background-position: 242px center;
     background-color: white;
     background-repeat: no-repeat;
-    box-shadow:1px 1px 1px #9d9d8e;
 }
 .connection p{
     margin:0;
@@ -52,18 +48,17 @@ a{
     width:520px;
     text-align:right;
 }
-.blog_single .sns{
-    line-height:10px;    
-}
 .page{
     position: absolute;
 }
 .main_content{
+    border-top:1px solid #000;
     margin-top:408px;
+    background-image: url("../img/cross.png");    
+
 }
 
 .navigation{
-    background-image: url("../img/nadaken_bg_wh.png");    
     position:absolute;
     width:100%;
     padding-top:60px;
@@ -77,20 +72,8 @@ a{
     display: block;
 
 }
-.blog_sequence{
-    border-image: url("../img/pencil_line.png") 3 round;
-    border-style:solid;
-    border-color:#d8d8d8;
-    border-width:1px;
-    border-image-width: 3px;
-    margin-top:30px;
-}
 .navigation li a{
-    border-image: url("../img/pencil_line.png") 3 round;
-    border-style:solid;
-    border-color:#d8d8d8;
-    border-width:1px;
-    border-image-width:0px 0px 3px 0px;
+    border:1px solid #000;
     border-left-width: 0;
     border-right-width: 0;
     margin-bottom: -1px;    
@@ -98,26 +81,16 @@ a{
     height: 57px;
     line-height: 57px;
     padding-left:52px;
-    background-image: url("../img/maru_icon.gif");
     background-position: 23px center;
     background-repeat: no-repeat;
-    color:#666666;
+    text-decoration: none;
+    color:#000;
     width:238px;
     transition-duration: 0.4s;    
     
 }
-.navigation li.first a,.menu_right li a{
-    border-image-width:3px 0px 3px 0px;
-}
-.totop:hover{
-    background-color:#42403a;
-    transition-duration: 0.2s;
-}
-.navigation li a:hover {
-    background-color:rgba(158,158,143,0.4);
-    color:#000;
-    box-shadow: rgba(158,158,143,0.4) 0 0 10px;
-    transition-duration: 0.4s;
+.navigation li a:hover, .totop:hover{
+    text-decoration: underline;
     
 }
 .menu_left,.logo,.menu_right{
@@ -148,14 +121,8 @@ a{
 .connection{
     padding:23px;
     height:128px;
-    border-image: url("../img/pencil_line.png") 3 round;
-    border-style:solid;
-    border-color:#d8d8d8;
-    border-width:1px;
-    border-image-width:0px 0px 3px 0px;
-    
-    border-bottom:1px solid #d8d8d8;
-    color:#9e9e8f;
+    border-bottom:1px solid #000;
+    color:#444;
 }
 .company_name{
     font-size:11pt;
@@ -165,7 +132,7 @@ a{
     font-weight: bold;
 }
 .tel .number{
-    color:#666666;
+    color:#000;
 }
 .time{
     font-size: 9pt;
@@ -180,12 +147,13 @@ a{
     display:inline-block;
     width:34px;
     height:14px;
-    background-color:#9D6764;
+    background-color:#ff0;
     font-size:10px;
     text-align:center;
 }
 .map_link a{
-    color:#eee;
+    text-decoration: none;
+    color:#000;
 }
 .eyeCatch{
     height: 165px;
@@ -212,10 +180,10 @@ a{
     height:165px;
 }
 .article .new{
-    background-color:#9d6764;
+    background-color:#ff0;    
     width:45px;
     height:45px;
-    color:#fff;
+    color:#000;
     border-radius: 50%;
     text-align: center;
     line-height: 45px;
@@ -230,23 +198,22 @@ a{
     display:block;
     clear:left;
     width:440px;
-    background-color:#221714;
+    background-color:#211819;
+    color:white;
     text-align: center;
     height:57px;
     margin:30px auto 60px auto;
     line-height:57px;
     border:1px solid #d8d8d8;    
-}
-.totop{
-    color:#aaa;
+    text-decoration: none;
     transition-duration: 0.4s;    
 }
 .totop img{
     padding-right:0.7em;
 }
 .footer hr{
-    height:60px;
-    background-image: url("../img/nadaken_bg_wh.png");    
+    background-color:#000;    
+    height:1px;
     border:none;
 }
 #border_top, #border_bottom,#border_left, #border_right{
@@ -347,7 +314,7 @@ a{
     z-index: 9995;
     height:100%;
     top:0;
-    background-image: url("../img/maru_bg_stripe.png");
+    background-color:#ff0;
     
 }
 #border_left{
@@ -365,7 +332,7 @@ a{
     text-align: center;
 }
 .footer_background,.footer_navi{
-    background-image: url("../img/maru_bg_stripe_bottom.png");    
+    background-color:#ff0;
     
 }
 
@@ -383,8 +350,11 @@ a{
   margin:0 1em;
   
 }
+.footer_navi a{
+    text-decoration: none;
+}
 .copyright,.footer_navi a{
-    color:rgba(255,255,255,0.8);
+    color:black;
     font-size:14px;
     
 }
@@ -395,131 +365,6 @@ a{
     text-align: center;
 
 }
-.subpage{
-    padding-top:30px;
-}
-
-ul.breadcrumb{
-    list-style: none; 
-    overflow: hidden; 
-    font-size: 15pt;            
-    margin-bottom: 30px;
-    padding:0;
-    
-    border-image: url("../img/pencil_line.png") 3 round;
-    border-style:solid;
-    border-color:#d8d8d8;
-    border-width:3px;
-    border-image-width:3px;    
-    
-    background-color:#ececec;
-}        
-.breadcrumb li a,
-.breadcrumb li span{
-    display:block;
-    color:#666666;
-
-    text-decoration: none;     
-    padding: 10px 0 10px 55px;
-    transition-duration:0.4s;
-}
-.breadcrumb li { 
-    float: left; 
-
-    background: #ececec; 
-    position: relative; 
-    display: block;
-    float: left;
-    transition-duration:0.4s; 
-}
-.breadcrumb li a:after { 
-    transition-duration:0.4s; 
-    content: " "; 
-    display: block; 
-    width: 0; 
-    height: 0;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    border-left: 30px solid #ececec;
-    position: absolute;
-    top: 50%;
-    margin-top: -50px; 
-    left: 100%;
-    z-index: 2; 
-}
-
-.breadcrumb li a:before { 
-
-    transition-duration:0.2s;
-    content: " "; 
-    display: block; 
-    width: 0; 
-    height: 0;
-    
-    border-image: url("../img/pencil_fill.png") 50 0 50 33 round;
-    
-    
-    border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
-    border-bottom: 50px solid transparent;
-    
-    
-    border-left: 30px solid #d8d8d8;
-    position: absolute;
-    top: 50%;
-    margin-top: -50px; 
-    margin-left: 3px;
-    left: 100%;
-    z-index: 1; 
-}	
-
-.breadcrumb li:last-child a {
-    background: #ececec !important;
-    pointer-events: none;
-    cursor: default;
-}
-.breadcrumb li a:hover{
-    background-color:rgb(158,158,143);
-    color:white;
-    transition-duration:0.2s;
-}
-.breadcrumb li a:hover:after {
-    transition-duration:0.2s;
-    border-left: 30px solid rgb(158,158,143);
-}
-.blog_single{
-    border-image: url("../img/pencil_line.png") 3 round;
-    border-style:solid;
-    border-color:#d8d8d8;
-    border-width:3px;
-    border-image-width:3px;
-    padding:60px;
-    width:778px;
-}
-.blog_single h1{
-    font-size:18pt;
-    font-weight: normal;
-}
-.blog_single time{
-    font-size:10pt;
-}
-.blog_sequence a,.tag_list a{
-    color:#666666;
-}
-.blog_sequence a:hover,.tag_list a:hover{
-    text-decoration: underline;
-}
-
-a.prev, a.next{
-    display:inline-block;
-    padding:25px;
-    width:350px;
-}
-a.next{
-    text-align:right;
-    margin-left:100px;
-}
-
-
 @media screen and (max-width: 1020px) {
     #border_left, #border_right{
         transition-duration: 1s;
@@ -530,4 +375,7 @@ a.next{
     #border_right{
         right:-60px;
     }    
+}
+a:hover{
+    text-decoration: underline;
 }

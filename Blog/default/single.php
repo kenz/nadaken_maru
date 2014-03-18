@@ -11,32 +11,32 @@ $this->BcBaser->setDescription($this->Blog->getTitle() . '｜' . $this->Blog->ge
 	});
 </script>
 <nav>
-<ul class="breadcrumb">
-	<li><?php $this->BcBaser->link("home", "/") ?></li>	
-	<?php
-	$tags = ($post["BlogTag"]);
-	$thisTag = false;
-	if (!empty($tags)) {
-		foreach ($tags as $tag) {
-			if ("NEW" != $tag["name"] && "TOP" != $tag["name"]) {
-				$thisTag = $tag["name"];
-				echo "<li>";
-				$this->BcBaser->link($tag["name"], "/data/archives/tag/" . $tag["name"]);
-				echo "</li>";
-				break;
+	<ul class="breadcrumb fix_center">
+		<li><?php $this->BcBaser->link("home", "/") ?></li>	
+		<?php
+		$tags = ($post["BlogTag"]);
+		$thisTag = false;
+		if (!empty($tags)) {
+			foreach ($tags as $tag) {
+				if ("NEW" != $tag["name"] && "TOP" != $tag["name"]) {
+					$thisTag = $tag["name"];
+					echo "<li>";
+					$this->BcBaser->link($tag["name"], "/data/archives/tag/" . $tag["name"]);
+					echo "</li>";
+					break;
+				}
 			}
 		}
-	}
-	?>
-	<li ><span class="current"><?php $this->BcBaser->contentsTitle() ?></span></li>	
-</ul>
+		?>
+		<li ><span class="current"><?php $this->BcBaser->contentsTitle() ?></span></li>	
+	</ul>
 </nav>
-<div class="blog_single">
-	<span class="date">
-<?php $this->Blog->postDate($post) ?>
-	</span>	
+<div class="blog_single fix_center">
+	<time>
+		<?php $this->Blog->postDate($post) ?>
+	</time>
 	<h1 class="with_sns">
-<?php $this->BcBaser->contentsTitle() ?>
+		<?php $this->BcBaser->contentsTitle() ?>
 	</h1>
 	<div class="sns">
 		<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none" data-dnt="true">ツイート</a>
@@ -52,32 +52,27 @@ $this->BcBaser->setDescription($this->Blog->getTitle() . '｜' . $this->Blog->ge
 		<div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
 	</div>
 	<div class="eye-catch">
-<?php echo $this->Blog->eyeCatch($post) ?>
+		<?php echo $this->Blog->eyeCatch($post) ?>
 	</div>
 	<div id="post-detail" class="post">
-	<?php echo str_replace('<div id="post-detail">','<div class="post-detail">', $this->Blog->getPostContent($post)); ?>
+		<?php echo str_replace('<div id="post-detail">', '<div class="post-detail">', $this->Blog->getPostContent($post)); ?>
 	</div>
-	<?php if($thisTag): ?>	
+	<?php if ($thisTag): ?>	
 		<hr class ="bottom"/>
 		<div class="tag_list">
-		<?php $this->BcBaser->element('blog_tag', array('post' => $post)) ?>
+			<?php $this->BcBaser->element('blog_tag', array('post' => $post)) ?>
 		</div>	
 	<?php endif ?>
 </div>
 <nav>
-<div class="blog_sequence">
-	<div class="prev">
-<?php $this->Blog->prevLink($post) ?>
+	<div class="blog_sequence fix_center">
+		<?php $this->Blog->prevLink($post, null, array("class" => "prev")) ?>
+		<?php $this->Blog->nextLink($post, null, array("class" => "next")) ?>
 	</div>
-	<div class="next">	
-<?php $this->Blog->nextLink($post) ?>
-	</div>
-</div>
-<?php
-$this->BcBaser->element('totop');
-if($thisTag){
-	$this->BcBaser->blogPosts("data",9,array("tag"=>$thisTag));
+	<?php
 	$this->BcBaser->element('totop');
-}
-?>
+	if ($thisTag) {
+		$this->BcBaser->blogPosts("data", 9, array("tag" => $thisTag));
+	}
+	?>
 </nav>
