@@ -11,7 +11,7 @@ $this->BcBaser->setDescription($this->Blog->getTitle() . '｜' . $this->Blog->ge
 	});
 </script>
 <nav>
-	<ul class="breadcrumb fix_center">
+	<ul class="breadcrumb">
 		<li><?php $this->BcBaser->link("home", "/") ?></li>	
 		<?php
 		$tags = ($post["BlogTag"]);
@@ -31,7 +31,7 @@ $this->BcBaser->setDescription($this->Blog->getTitle() . '｜' . $this->Blog->ge
 		<li ><span class="current"><?php $this->BcBaser->contentsTitle() ?></span></li>	
 	</ul>
 </nav>
-<div class="blog_single fix_center">
+<div class="blog_single">
 	<time>
 		<?php $this->Blog->postDate($post) ?>
 	</time>
@@ -65,7 +65,7 @@ $this->BcBaser->setDescription($this->Blog->getTitle() . '｜' . $this->Blog->ge
 	<?php endif ?>
 </div>
 <nav>
-	<div class="blog_sequence fix_center">
+	<div class="blog_sequence">
 		<?php $this->Blog->prevLink($post, null, array("class" => "prev")) ?>
 		<?php $this->Blog->nextLink($post, null, array("class" => "next")) ?>
 	</div>

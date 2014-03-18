@@ -25,22 +25,17 @@ $this->BcBaser->setDescription($this->Blog->getDescription());
 
 <?php if (!empty($posts)): ?>
 	<?php foreach ($posts as $post): ?>
-		<div class="post">
-			<h4 class="contents-head">
-				<?php $this->Blog->postTitle($post) ?>
-			</h4>
-			<?php $this->Blog->postContent($post, true, true) ?>
-			<div class="meta"> 
-				<span class="date">
-					<?php $this->Blog->postDate($post) ?>
-				</span>
-				<span class="category">
-					<?php $this->Blog->category($post) ?>
-					&nbsp;
-					<?php $this->Blog->author($post) ?>
-				</span> </div>
-			<?php $this->BcBaser->element('blog_tag', array('post' => $post)) ?>
-		</div>
+
+	<?php $this->Blog->postContent($post, true, true) ?>
+	<div class="meta"> 
+		<span class="date">
+			<?php $this->Blog->postDate($post) ?>
+		</span>
+		<span class="category">
+			<?php $this->Blog->category($post) ?>
+			&nbsp;
+			<?php $this->Blog->author($post) ?>
+		</span> </div>
 	<?php endforeach; ?>
 	$this->BcBaser->element('totop');
 <?php else: ?>

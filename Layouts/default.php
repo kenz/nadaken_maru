@@ -46,7 +46,7 @@ $blog_count = 9;
 						$this->BcBaser->blogPosts("data", $top_count, array("tag" => "TOP"));
 						echo "</nav>";
 					} else {
-						echo "<div class=\"subpage\">";
+						echo "<div class=\"subpage fix_center\">";
 						if ($this->BcBaser->isPage()) {
 							$this->BcBaser->element('breadcrumb1');
 							echo "<div class=\"static\">";
