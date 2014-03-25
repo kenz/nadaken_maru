@@ -105,17 +105,9 @@ $entryDates = $data['entryDates'];
 
 //カレンダーを表示するHTML
 	print '<table class="blog-calendar"><tr><td colspan=7>';
-	if ($data['prev']) {
-		print $this->BcBaser->getLink($month3 . "月", array('admin' => false, 'blog' => false, 'plugin' => '', 'controller' => $blogContent['BlogContent']['name'], 'action' => 'archives', 'date', $year3, $month3), null, false);
-	} else {
-		print $month3 . "月";
-	}
+	print $this->BcBaser->getLink($month3 . "月", array('admin' => false, 'blog' => false, 'plugin' => '', 'controller' => $blogContent['BlogContent']['name'], 'action' => 'archives', 'date', $year3, $month3), null, false);
 	print "　" . $year . "年" . $month . "月　";
-	if ($data['next']) {
-		print $this->BcBaser->getLink($month4 . "月", array('admin' => false, 'blog' => false, 'plugin' => '', 'controller' => $blogContent['BlogContent']['name'], 'action' => 'archives', 'date', $year4, $month4), null, false);
-	} else {
-		print $month4 . "月";
-	}
+	print $this->BcBaser->getLink($month4 . "月", array('admin' => false, 'blog' => false, 'plugin' => '', 'controller' => $blogContent['BlogContent']['name'], 'action' => 'archives', 'date', $year4, $month4), null, false);
 	print "</td></tr>";
 
 	print '

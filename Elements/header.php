@@ -11,17 +11,24 @@
 				<?php $this->BcBaser->element('search') ?>
 			</div>
 			<div class="sns">
-				<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none" data-dnt="true">ツイート</a>
-				<script>!function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-				if (!d.getElementById(id)) {
-					js = d.createElement(s);
-					js.id = id;
-					js.src = p + '://platform.twitter.com/widgets.js';
-					fjs.parentNode.insertBefore(js, fjs);
-				}
-			}(document, 'script', 'twitter-wjs');</script>	
-				<div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+				<?php
+					$url = ((!empty($_SERVER['HTTPS'])) ? "https://" : "http://") . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+					$title = urlencode($this->BcBaser->getTitle());
+					echo " <a href=\"http://twitter.com/share?text={$title}&amp;url={$url}\">";
+					$this->BcBaser->img("maru_icon_twitter.png",array("title"=>"ツイートする","alt"=>"(t)"));
+					echo "</a>";
+					echo " <a href=\"http://www.facebook.com/sharer.php?u={$url}&amp;t={$title}\">";
+					$this->BcBaser->img("maru_icon_facebook.png",array("title"=>"Facebookでシェアする","alt"=>"(f)"));
+					echo "</a>";
+				?>
+				<a title="Google+でシェア" href="https://plus.google.com/share?url=<?php echo $url; ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+				<?php $this->BcBaser->img("maru_icon_google.png",array("title"=>"Google+でシェアする","alt"=>"+1")); ?>
+				</a>
+				<?php 
+				$image = $this->BcBaser->getImg("maru_icon_mail.png",array("title"=>"お問い合わせ","alt"=>"Mail"));
+				$this->BcBaser->link($image, "/contact/index")
+				?>
+
 			</div>
 		</div>
 	</div>

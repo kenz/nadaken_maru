@@ -51,6 +51,7 @@ a{
     height:25px;
     width:520px;
     text-align:right;
+    margin-top:15px;
 }
 .blog_single .sns{
     line-height:10px;    
@@ -72,6 +73,8 @@ a{
 }
 .navigation ul{
     list-style: none;
+    /* border: dotted #aaa; */
+    /* border-width: 1px 0px; */
 }
 .navigationt li{
     display: block;
@@ -89,23 +92,19 @@ a{
     margin-top:30px;
 }
 .navigation li a{
-    border-image: url("../img/pencil_line.png") 3 round;
-    border-style:solid;
-    border-color:#d8d8d8;
-    border-width:1px;
+    border: #aaa dotted;
+    border-width: 1px 0px;
     border-image-width:0px 0px 3px 0px;
-    border-left-width: 0;
-    border-right-width: 0;
-    margin-bottom: -1px;    
+    margin-bottom: 1px;    
     display:block;
-    height: 57px;
-    line-height: 57px;
+    height: 55px;
+    line-height: 55px;
     padding-left:52px;
     background-image: url("../img/maru_icon.gif");
     background-position: 23px center;
     background-repeat: no-repeat;
     color:#666666;
-    width:238px;
+    width: 237px;
     transition-duration: 0.4s;    
     
 }
@@ -121,6 +120,11 @@ a{
     color:#000;
     box-shadow: rgba(158,158,143,0.4) 0 0 10px;
     transition-duration: 0.2s;
+    
+}
+.menu_right{
+    border-bottom: 1px dotted #aaa;
+    padding-bottom: 1px;
     
 }
 .menu_left,.logo,.menu_right{
@@ -147,17 +151,14 @@ a{
     margin:0;
     margin-top: 60px;
     padding:0;
+    border: dotted #aaa;
+    border-width: 1px 0;
+    padding-top: 1px;
 }
 .connection{
     padding:23px;
-    height:128px;
-    border-image: url("../img/pencil_line.png") 3 round;
-    border-style:solid;
-    border-color:#d8d8d8;
-    border-width:1px;
-    border-image-width:0px 0px 3px 0px;
-    
-    border-bottom:1px solid #d8d8d8;
+    height:125px;    
+    border-bottom: 1px dotted #aaa;
     color:#9e9e8f;
 }
 .company_name{
@@ -484,13 +485,12 @@ ul.breadcrumb{
     cursor: default;
 }
 .breadcrumb li a:hover{
-    background-color:rgb(158,158,143);
-    color:white;
+    background-color:#dcdcdc;
     transition-duration:0.2s;
 }
 .breadcrumb li a:hover:after {
     transition-duration:0.2s;
-    border-left: 30px solid rgb(158,158,143);
+    border-left: 30px solid #dcdcdc;
 }
 .blog_single{
     border-image: url("../img/pencil_line.png") 3 round;
@@ -577,6 +577,45 @@ a.next{
     right: 0;
     line-height: 60px;
     text-align: center;
+}
+table.blog-calendar {
+    border-collapse:collapse;
+    height:222px;
+    
+}
+table.blog-calendar{
+    width:225px;
+
+}
+.blog-calendar th,.blog-calendar td{
+    border:1px solid #888;
+    text-align: center;
+}
+.widget-area-2{
+    margin-top:60px;
+    height:220px;    
+}
+.widget-blog-calendar{
+    float:left;
+    width:225px;
+}
+.widget-blog-categories-archives,
+.widget-blog-monthly-archives,
+.widget-blog-recent-entries{
+    height:220px;
+    float:left;
+    border: 1px solid #888;
+    border-left-width: 0;
+    width:224px;
+    
+}
+.widget-blog-categories-archives h2,
+.widget-blog-monthly-archives h2,
+.widget-blog-recent-entries h2{
+    text-align: left;
+    margin-left:15px;
+    margin-top:15px;
+
 }
 
 
