@@ -25,7 +25,6 @@ $this->BcBaser->setDescription($this->Blog->getDescription());
 
 <?php if (!empty($posts)): ?>
 	<?php foreach ($posts as $post): ?>
-
 	<?php $this->Blog->postContent($post, true, true) ?>
 	<div class="meta"> 
 		<span class="date">

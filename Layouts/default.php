@@ -74,17 +74,26 @@ $blog_count = 9;
 			<?php $this->BcBaser->footer() ?>
 			<?php $this->BcBaser->func() ?>
 			
-		</div><!--Page-->	
+		</div><!--Page-->
+		<?php
+		/* 
 		<div id="border_left"></div>
 		<div id="border_right"</div>
-		
+		 */
+		?>
 		<script>
 			$(function() {
 				<?php 
 				// 画像ファイルを左右の縮尺を合わせて上下をトリミングするための処理
 				?>
 				$(".img-eye-catch").on("load", function() {
-					var ch = 165;
+					<?php
+					if ($this->BcBaser->isHome()) {
+						echo "var ch = 165;";
+					}else{
+						echo "var ch = 180;";
+					}
+					?>
 					var ih = ($(this).width() - ch) / 2;
 					$(this).css("left", "-" + ih + "px");
 				});

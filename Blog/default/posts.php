@@ -6,7 +6,7 @@
 
 <?php if(empty($posts)): ?>
 <?php else: ?>
-	<div class="container fix_center">
+	<div class="container fix_center non_text">
 
 	<?php foreach($posts as $key => $post): ?>
 		<div class="article">

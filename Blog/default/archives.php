@@ -1,6 +1,6 @@
 <?php
 /**
- * ブログアーカイブ一覧
+ * ブログタグ別一覧
  */
 $this->BcBaser->setDescription($this->Blog->getTitle() . '｜' . $this->BcBaser->getContentsTitle() . 'のアーカイブ一覧です。');
 ?>
@@ -19,10 +19,21 @@ $this->BcBaser->setDescription($this->Blog->getTitle() . '｜' . $this->BcBaser-
 <div class ="blog_archives">
 	<?php if (empty($posts)): ?>
 	<?php else: ?>
-		<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 265, "itemSelector": ".article" }'>
-
+		<div id="container" class="js-masonry with_text" data-masonry-options='{ "columnWidth": 265, "itemSelector": ".article" }'>
+			<?php $count = 0; ?>
 			<?php foreach ($posts as $key => $post): ?>
-				<div class="article">
+			<?php
+				if($count==0){
+					$count = 1;
+					echo '<div class="article left">';					
+				}else if($count==1){
+					$count = 2;
+					echo '<div class="article center">';
+				}else if($count==2){
+					$count = 0;
+					echo '<div class="article right">';
+				}
+			?>
 
 					<?php
 					/**
@@ -34,17 +45,44 @@ $this->BcBaser->setDescription($this->Blog->getTitle() . '｜' . $this->BcBaser-
 					$tags = split(",", (strip_tags(str_replace(" ", "", $this->Blog->getTag($post)))));
 					$tagLinks = split(",", ($this->Blog->getTag($post)));
 
+					$new = false; //NEWタグが付いているか
+					$exist = false; //NEWとTOP以外のタグが最低1つ以上あるか
+					$tagString = ""; //NEWとTOPを除くタグ一覧の文字列
 					if (count($tags) > 0) {
-						echo "<div class=\"tags\">";
-						foreach($tags as $tagKey => $tag){
-							if($tag==="NEW"){
-								echo "<div class=\"new\">New</div>";
-								break;
+						$first = true;
+						foreach ($tags as $tagKey => $tag) {
+							if ($tag === "TOP") {
+								//トップのタグは表示しない					
+							} else if ($tag === "NEW") {
+								//NEWタグはタイトルの後で表示する
+								$new = true;
+							} else {
+								$exist = true;
+								if ($first) {
+									$first = false;
+								} else {
+									$tagString.= " "; //二回目からは最初に空白スペースを付ける
+								}
+								$tagString.= $tag;
 							}
 						}
-						echo "</div>";
+						if ($exist) {
+							echo "<div class=\"tags\">{$tagString}</div>";
+						}
 					}
 					?>
+					<div class="title">
+						<h2>
+							<?php $this->Blog->postTitle($post); ?>
+						</h2>
+						<?php
+						if ($new) {
+							echo "<span class=\"new\">NEW</span>";
+						}
+						?>
+					</div>
+
+					<div class="content"><?php $this->Blog->postContent($post, false, true, 40) ?></div>
 				</div>
 
 			<?php endforeach; ?>

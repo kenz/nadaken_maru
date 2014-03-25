@@ -77,12 +77,15 @@ a{
     display: block;
 
 }
-.blog_sequence{
+.blog_sequence, .with_text .article,.with_text .more a{
     border-image: url("../img/pencil_line.png") 3 round;
     border-style:solid;
     border-color:#d8d8d8;
     border-width:1px;
     border-image-width: 3px;
+    
+}
+.blog_sequence, .with_text .article{
     margin-top:30px;
 }
 .navigation li a{
@@ -113,11 +116,11 @@ a{
     background-color:#42403a;
     transition-duration: 0.2s;
 }
-.navigation li a:hover {
+.navigation li a:hover,.with_text .more a:hover {
     background-color:rgba(158,158,143,0.4);
     color:#000;
     box-shadow: rgba(158,158,143,0.4) 0 0 10px;
-    transition-duration: 0.4s;
+    transition-duration: 0.2s;
     
 }
 .menu_left,.logo,.menu_right{
@@ -206,24 +209,27 @@ a{
 .container{
     padding-top:30px;
 }
-.article{
+.non_text .article{
     margin:30px;
     float:left;
     height:165px;
 }
-.article .new{
-    background-color:#9d6764;
+.non_text .new{
+    top:-165px;
+    left:125px;    
     width:45px;
     height:45px;
-    color:#fff;
-    border-radius: 50%;
-    text-align: center;
     line-height: 45px;
+    border-radius: 50%;
+    position:relative;    
+}
+.article .new{
+    background-color:#9d6764;
+    color:#fff;
+    text-align: center;
     font-size:9pt;
     font-weight: bold;
-    position:relative;
-    top:-165px;
-    left:125px;
+
 }
 
 .totop{
@@ -517,6 +523,60 @@ a.prev, a.next{
 a.next{
     text-align:right;
     margin-left:100px;
+}
+.with_text .center, .with_text .right{
+    margin-left:45px;
+}
+.with_text .article{
+    background-color:white;
+    width:268px;
+    height:480px;
+    float:left;
+    position: relative;
+    overflow: hidden;
+    margin-bottom:25px;
+        
+}
+.with_text .eyeCatch{
+    position: absolute;
+    top:30px;
+    left:44px;
+}
+.with_text .eyeCatch, .with_text .eyeCatch img{
+    width:180px;
+    height:180px;
+}
+.with_text .tags{
+    margin:240px 20px 10px 20px;
+    background-color:#a0a092;
+    text-align: center;
+    color:white;
+}
+.with_text .title{
+    margin:0 20px;
+}
+.with_text h2{
+    display:inline;
+    font-size:14pt;
+}
+.with_text a{
+    color:black;
+}
+.with_text .more a{
+    transition-duration: 0.4s;
+}
+.with_text .content{
+    margin:10px 20px;
+}
+.more a{
+    position: absolute;    
+    top: 422px;
+    height: 60px;
+    border: 1px solid black;
+    left: 0;
+    right: 0;
+    line-height: 60px;
+    text-align: center;
 }
 
 
