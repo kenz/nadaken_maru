@@ -21,5 +21,4 @@ $this->BcBaser->js(array('admin/jquery-ui-1.8.19.custom.min', 'admin/i18n/ui.dat
 	</div>	
 </div>
 <?php $this->BcBaser->element('totop'); ?>					
-<?php $this->BcBaser->blogPosts("data", 9); ?>
-<?php $this->BcBaser->element('totop');
+<?php $this->BcBaser->blogPosts("data", 12); ?>

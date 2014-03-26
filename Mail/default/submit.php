@@ -25,5 +25,4 @@ if (Configure::read('debug') == 0) {
 	</div>
 </div>
 <?php $this->BcBaser->element('totop'); ?>					
-<?php $this->BcBaser->blogPosts("data", 9); ?>
-<?php $this->BcBaser->element('totop');
+<?php $this->BcBaser->blogPosts("data", 12); ?>

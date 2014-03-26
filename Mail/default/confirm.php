@@ -23,5 +23,4 @@ if ($freezed) {
 	</div>
 </div>
 <?php $this->BcBaser->element('totop'); ?>					
-<?php $this->BcBaser->blogPosts("data", 9); ?>
-<?php $this->BcBaser->element('totop');
+<?php $this->BcBaser->blogPosts("data", 12); ?>

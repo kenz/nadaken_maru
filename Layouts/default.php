@@ -5,11 +5,11 @@
 /**
  * トップページに表示する記事の数を設定します
  */
-$top_count = 9;
+$top_count = 12;
 /**
  * BLOGページ内で表示する記事の数を設定します
  */
-$blog_count = 9;
+$blog_count = 12;
 ?>
 <!DOCTYPE html>
 <html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
@@ -59,7 +59,6 @@ $blog_count = 9;
 							echo "</div>"; //static
 							$this->BcBaser->element('totop');
 							$this->BcBaser->blogPosts("data", $blog_count);
-							$this->BcBaser->element('totop');
 						}
 						flush();
 						$this->BcBaser->flash();

@@ -89,6 +89,9 @@ $this->BcBaser->setDescription($this->Blog->getTitle() . '｜' . $this->BcBaser-
 		</div>
 		<?php $this->BcBaser->element('totop'); ?>		
 	<?php endif; ?>
-<?php $this->BcBaser->pagination('simple'); ?>
+<?php if (!empty($posts)){
+ $this->BcBaser->pagination('simple'); 
+}
+?>
 </div>
 </nav>
