@@ -9,13 +9,15 @@ body{
 }
 a{
     text-decoration: none;
+    color:#70b198;
 }
+
 .page{
     width:100%;
 }
 .header_back{
     background-image: url("../img/maru_bg_stripe_top.png");
-    height:60px;
+    height:50px;
 }
 .fix_center, .widget-area{
     width:900px;
@@ -30,7 +32,7 @@ a{
     display:none;
 }
 .search-box #ContentQ{
-    margin-top:15px;
+    margin-top: 10px;
     width:250px;
     height:28px;
     font-size:11pt;
@@ -51,10 +53,13 @@ a{
     height:25px;
     width:520px;
     text-align:right;
-    margin-top:15px;
+    margin-top: 10px;
 }
 .blog_single .sns{
     line-height:10px;    
+}
+.blog_single .eye-catch{
+    text-align: center;
 }
 .page{
     position: absolute;
@@ -80,9 +85,10 @@ a{
     display: block;
 
 }
-.blog_sequence, .with_text .article,.with_text .more a, .mail td{
+.blog_sequence, .with_text .article,.with_text .more a, .mail td,.blog_single h1, .static h1,.static table th,.static table td, .widget-area-2{
     border-image: url("../img/pencil_line.png") 3 round;
     border-style:solid;
+    border-image-repeat: round;
     border-color:#d8d8d8;
     border-width:1px;
     border-image-width: 3px;
@@ -126,7 +132,7 @@ a{
     transition-duration: 0.2s;
 }
 
-.navigation li a:hover,.with_text .more a:hover {
+.navigation li a:hover,.with_text .more a:hover,.widget-blog-recent-entries a:hover {
     background-color:#d7d7d1;
     color:#000;
     box-shadow: rgba(158,158,143,0.4) 0 0 10px;
@@ -216,6 +222,7 @@ a{
 }
 .eyeCatch img{
     height:165px;
+    position:relative;
 }
 
 .container{
@@ -250,9 +257,9 @@ a{
     width:440px;
     background-color:#221714;
     text-align: center;
-    height:57px;
+    height: 40px;
     margin:30px auto 60px auto;
-    line-height:57px;
+    line-height: 40px;
     border:1px solid #d8d8d8;    
 }
 .totop{
@@ -377,7 +384,15 @@ a{
 .menu_left .last{
     display:none;
 }
-.widget-area h2,.fb-like-box{
+.widget-area h2,.widget-blog-recent-entries h2{
+    margin-top:-5px;
+    margin-bottom:20px;
+    font-size:11pt;
+    text-align: center;
+    background-color:#9c9d8b;
+    color:white;
+}
+.fb-like-box{
     margin-top: 60px;
     font-size: 11pt;
     text-align: center;
@@ -425,6 +440,8 @@ ul.breadcrumb{
     padding:0;
     
     border-image: url("../img/pencil_line.png") 3 round;
+    border-image-repeat: repeat;
+
     border-style:solid;
     border-color:#d8d8d8;
     border-width:3px;
@@ -473,6 +490,7 @@ ul.breadcrumb{
     width: 0; 
     height: 0;
     border-image: url("../img/pencil_fill.png") 50 0 50 33 round;    
+    border-image-repeat: round;    
     border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
     border-bottom: 50px solid transparent;
     border-left: 30px solid white;
@@ -499,6 +517,7 @@ ul.breadcrumb{
 }
 .blog_single, .static, .mail{
     border-image: url("../img/pencil_line.png") 3 round;
+    border-image-repeat: round;    
     border-color:#d8d8d8;
     background-color:white;
     
@@ -510,10 +529,13 @@ ul.breadcrumb{
 }
 .static h1,.mail h1{
     margin-top:0;
+    padding-bottom: 60px;
+    margin-bottom:60px;
 }
 .blog_single h1, .static h1{
     font-size:18pt;
     font-weight: normal;
+    border-image-width: 0 0 3px 0;
 }
 .blog_single time{
     font-size:10pt;
@@ -555,9 +577,12 @@ a.next{
     top:30px;
     left:44px;
 }
-.with_text .eyeCatch, .with_text .eyeCatch img{
+.with_text .eyeCatch{
     width:180px;
     height:180px;
+}
+.with_text .eyeCatch img{
+    height:180px;    
 }
 .with_text .tags{
     margin:240px 20px 10px 20px;
@@ -603,35 +628,17 @@ table.blog-calendar{
 
 }
 .blog-calendar th,.blog-calendar td{
-    border:1px solid #888;
     text-align: center;
+    padding:0;
 }
-.widget-area-2{
-    margin-top:60px;
-    height:220px;    
-}
+
 .widget-blog-calendar{
     float:left;
-    width:225px;
+    width:230px;
+    margin-left:80px;
+    margin-right: 80px;
 }
-.widget-blog-categories-archives,
-.widget-blog-monthly-archives,
-.widget-blog-recent-entries{
-    height:220px;
-    float:left;
-    border: 1px solid #888;
-    border-left-width: 0;
-    width:224px;
-    
-}
-.widget-blog-categories-archives h2,
-.widget-blog-monthly-archives h2,
-.widget-blog-recent-entries h2{
-    text-align: left;
-    margin-left:15px;
-    margin-top:15px;
 
-}
 
 .mail input[type="text"],.mail input[type="password"],.mail select{
     border:1px solid #D2D2D2;
@@ -661,6 +668,7 @@ table.blog-calendar{
 }
 .mail th, .mail td{
     padding-bottom: 1em;
+    padding-top: 1em;
 }
 #FieldMessageSex,.mail-description,.mail-attention,.mail-attention{
     font-size:10pt;
@@ -702,7 +710,56 @@ table.blog-calendar{
     background: linear-gradient(to bottom, #fff 33%, #dff1ee 47%, #c1e2dc 61%, #f1f9f7 100%, #f1f9f7 100%);
     border:1px solid #c1e2dc;
 }
+.static table{
+    margin-left:60px;
+    margin-right:60px;
+}
+.static table tr{
+    text-align:left;
+}
+.static table th,.static table td{    
+ height:50px;
+ line-height: 50px;
+ border-image-width: 0 0 3px 0;
+ border-width: 0 0 1px 0;
+}
+.maps{
+    margin-left:60px;
+}
+.widget_logo{
+    float:left;    
+}
+.widget_logo img{
+    border-radius:50%;
+}
+.widget-area-2{
+    padding:55px;
+    margin-top:60px;    
+}
+.widget-blog-recent-entries{
+    width:230px;
+    float:left;
+}
 
+.widget-blog-recent-entries ul{
+    margin:0;
+    padding:0;
+}
+.widget-blog-recent-entries li{
+    list-style: none;
+    text-align: center;
+    margin:-1px 0 0 0;    
+    border:1px solid #888;
+    border-width: 1px 0;
+}
+.widget-blog-recent-entries a{
+    color:black;
+    display: block;
+    height:40px;
+    line-height: 40px;
+    width:230px;
+    font-size:11pt;
+}
 @media screen and (max-width: 1020px) {
     #border_left, #border_right{
         transition-duration: 1s;
