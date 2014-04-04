@@ -22,10 +22,11 @@
 	</script>
 	<div class="fb-like-box fix_center" style="height:250px;display:block;" data-href="http://www.facebook.com/basercms" data-height="250" data-width="900" data-show-faces="true" data-show-border="false" data-stream="false" data-border-color="#fff" data-header="false"></div>
 	<!--FB_END-->
-	<div class="footer_navi">
-		<?php $this->BcBaser->element('global_menu') ?>
-	</div>
 	<div class="footer_background" id="border_bottom">
+
+		<div class="footer_navi">
+			<?php $this->BcBaser->element('global_menu') ?>
+		</div>
 		<p class="copyright">©Copyright 
 			<?php $this->BcBaser->copyYear(2014) ?>
 			nadaken All rights Reserved.
